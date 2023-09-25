@@ -28,11 +28,21 @@ function generatePassword(){
     password.innerHTML = pass;
     novaSenha = pass;
 }
+    //pegando o botão no html e adicionando evento de click
+    button.addEventListener('click', (event) => {
+        generatePassword();
+    })
+
     //criando função que copia a senha e avisa
     function copyPassword(){
         navigator.clipboard.writeText(novaSenha);
-        alert("Senha copiada com sucesso! 🎉")
     }
+
+    //pegando o botão no html e adicionando evento de click 
+    password.addEventListener('click', (event) => {
+        copyPassword()
+        alert("Senha copiada com sucesso! 🎉")
+    })
 
 
 
